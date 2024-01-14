@@ -9,3 +9,9 @@ spring:
     url: jdbc:h2:mem:homework;MODE=MySQL;
     username: SA
     password:
+  jpa:
+#    show-sql: true
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
