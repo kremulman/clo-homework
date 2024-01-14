@@ -8,12 +8,14 @@ import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 @SpringBootApplication
+@EnableAspectJAutoProxy
 @ControllerAdvice(basePackages = {"com.sangcheol.clohomework.controller.*"})
 public class ClohomeworkApplication {
 
