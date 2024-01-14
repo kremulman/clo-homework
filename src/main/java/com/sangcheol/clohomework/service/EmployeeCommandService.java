@@ -35,6 +35,7 @@ public class EmployeeCommandService {
             employeeList.addAll(parseEmployeeText(text));
         }
 
+        // 직원 중복 등 각종 제약에 의한 에러는 정해지는 정책에 따라 처리 또는 검증을 해야 함.
         employeeRepository.saveAll(employeeList);
     }
 

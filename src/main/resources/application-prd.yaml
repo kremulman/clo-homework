@@ -1,1 +1,18 @@
-# prd에 맞는 설정
+# prd에 맞는 설정을 써야 한다.
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:homework;MODE=MySQL;
+    username: SA
+    password:
+  jpa:
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: true
+

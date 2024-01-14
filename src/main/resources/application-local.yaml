@@ -10,8 +10,7 @@ spring:
     username: SA
     password:
   jpa:
-#    show-sql: true
     properties:
       hibernate:
-        show_sql: true
+        show_sql: false
         format_sql: true

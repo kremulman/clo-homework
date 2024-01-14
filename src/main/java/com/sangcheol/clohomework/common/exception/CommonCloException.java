@@ -10,6 +10,11 @@ public class CommonCloException extends RuntimeException {
     private CommonErrorCode code;
     private String message;
 
+    public CommonCloException(CommonErrorCode code) {
+        this.code = code;
+        this.message = code.getDefaultMessage();
+    }
+
     public CommonCloException(CommonErrorCode code, String message) {
         String applyMessage = Strings.isBlank(message) ? code.getDefaultMessage() : message;
         this.code = code;

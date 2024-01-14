@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 public enum CommonErrorCode {
 
     NOT_FOUND(HttpStatus.NOT_FOUND, "대상을 찾을 수 없습니다.", "%s 을(를) 찾을 수 없습니다."),
+    ALREADY_EXIST(HttpStatus.BAD_REQUEST, "이미 존재하는 데이터입니다.", "이미 존재하는 데이터입니다."),
     UNKNOWN_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "알 수 없는 오류가 발생했습니다.", "알 수 없는 오류가 발생했습니다.")
     ;
 
