@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.sangcheol.clohomework.entity.Employee;
 import com.sangcheol.clohomework.repository.EmployeeRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Service;
@@ -24,6 +25,7 @@ public class EmployeeCommandService {
     private final EmployeeRepository employeeRepository;
 
     // 직원정보 생성
+    @Transactional
     public void createEmployee(MultipartFile file, String text) {
         List<Employee> employeeList = new ArrayList<>();
 
