@@ -23,7 +23,7 @@ public class CloController {
     // 직원들 연락정보 조회
     @GetMapping("/employee")
     @ResponseStatus(value = HttpStatus.OK)
-    public CommonResponse<Page<EmployeeResponseDto>> getEmployeeList(Pageable pageable, @RequestBody Object obj) {
+    public CommonResponse<Page<EmployeeResponseDto>> getEmployeeList(Pageable pageable) {
         return CommonResponse.ok(employeeQueryService.getEmployeeList(pageable));
     }
 
